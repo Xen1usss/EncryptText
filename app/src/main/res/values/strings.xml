@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EncryptText</string>
+    <string name="welcome_text">Welcome to the App. There you can encrypt your text. Press start for beginning</string>
+    <string name="start">Start</string>
+    <string name="hint">Please, enter your text for encrypt</string>
+    <string name="encrypt">Encrypt</string>
+</resources>
