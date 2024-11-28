@@ -3,5 +3,7 @@
     <string name="welcome_text">Welcome to the App. There you can encrypt your text. Press start for beginning</string>
     <string name="start">Start</string>
     <string name="hint">Please, enter your text for encrypt</string>
-    <string name="encrypt">Encrypt</string>
+    <string name="resultsText">Here is your encrypted text</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="encrypted_text">*Encrypted*</string>
 </resources>
