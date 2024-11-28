@@ -19,5 +19,14 @@
         android:id="@+id/textFragment"
         android:name="ks.encrypttext.fragments.TextFragment"
         android:label="fragment_text"
-        tools:layout="@layout/fragment_text" />
+        tools:layout="@layout/fragment_text" >
+        <action
+            android:id="@+id/action_textFragment_to_encrypt"
+            app:destination="@id/encrypt" />
+    </fragment>
+    <fragment
+        android:id="@+id/encrypt"
+        android:name="ks.encrypttext.fragments.Encrypt"
+        android:label="fragment_encrypt"
+        tools:layout="@layout/fragment_encrypt" />
 </navigation>
