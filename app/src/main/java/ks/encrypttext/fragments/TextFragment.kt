@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.findNavController
 import ks.encrypttext.R
 
@@ -17,10 +18,12 @@ class TextFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_text, container, false)
         val encryptButton = view.findViewById<Button>(R.id.encryptButton)
+        val textForEncryptView = view.findViewById<TextView>(R.id.textForEncrypt)
 
         encryptButton.setOnClickListener {
-            val navController = view.findNavController()
-            navController.navigate(R.id.action_textFragment_to_encrypt)
+            val text = textForEncryptView.text.toString()
+            val action = TextFragmentDirections.actionTextFragmentToEncrypt(text)
+            view.findNavController().navigate(action)
         }
 
         return view
