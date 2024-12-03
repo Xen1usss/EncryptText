@@ -18,7 +18,18 @@ class Encrypt : Fragment() {
         val text = EncryptArgs.fromBundle(requireArguments()).textForEncrypt
         val encryptedText = view.findViewById<TextView>(R.id.encryptedText)
 
-        encryptedText.text = text.reversed()
+        fun caesarCipher(text: String): String {
+            val alpha = " ,.!?abcdefghijklmnopqrstuvwxyz()"
+            val n = 3 // Сдвиг всегда на 3
+            val s = text
+            var res = ""
+            for (c in s) {
+                res += alpha[(alpha.indexOf(c) + n) % alpha.length]
+            }
+            return res
+        }
+
+        encryptedText.text = caesarCipher(text)
 
         return view
     }
